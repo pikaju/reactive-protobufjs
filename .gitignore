@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+
+# Generated source files
+generated/
+
+# Build output
+dist/
+
+# Error logs
+yarn-error.log

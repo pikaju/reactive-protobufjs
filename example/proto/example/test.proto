@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package example;
+
+message TestRequest {
+  int32 value = 1;
+}
+
+message TestResponse {
+  string value = 1;
+}
+
+service Example {
+  rpc PerformUnaryRequest (TestRequest) returns (TestResponse);
+  rpc PerformClientStreamRequest (stream TestRequest) returns (TestResponse);
+  rpc PerformServerStreamRequest (TestRequest) returns (stream TestResponse);
+  rpc PerformBidiStreamRequest (stream TestRequest) returns (stream TestResponse);
+}

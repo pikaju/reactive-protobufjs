@@ -1,0 +1,14 @@
+{
+  "name": "example",
+  "private": true,
+  "scripts": {
+    "build:proto": "make-dir src/generated && pbjs -t json -o src/generated/declaration.json proto/**/*.proto && pbjs -t static-module -o src/generated/index.js proto/**/*.proto && pbts -o src/generated/index.d.ts src/generated/index.js"
+  },
+  "dependencies": {
+    "protobufjs": "^6.11.2",
+    "reactive-protobufjs": "file:../"
+  },
+  "devDependencies": {
+    "make-dir-cli": "^3.0.0"
+  }
+}
